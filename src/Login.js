@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { Config } from './Config'
 import Loading from "./Loading";
-import { useNavigate } from "react-router";
-
+// import { useNavigate } from "react-router";
+//import { useNavigate } from "react-router";
+import { Link, useHistory } from "react-router-dom";
 function Login() {
-   const navigate = useNavigate();
+   //const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
+  const history=useHistory()
  
   const formik = useFormik({
     initialValues: {
@@ -38,7 +40,7 @@ function Login() {
         localStorage.setItem("myreact", user.data.token);
         if (user.data.message === "Success") {
           setLoading(false);
-          navigate("/addproduct");
+          history("/addproduct");
           alert("Successfully Logged in");
         
         }else {
@@ -59,7 +61,7 @@ function Login() {
             <div className="col-lg-4 d-none d-lg-block">
               <img
                 className="bg-login-image"
-                src="https://png.pngtree.com/png-vector/20190718/ourmid/pngtree-set-of-construction-equipment-in-yellow-special-machines-for-the-building-png-image_1547117.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7KUClvOYxu-LUGLsVB2BKtReIFxAtg4hF3g&usqp=CAU"
                 alt="login"
               />
             </div>

@@ -38,9 +38,49 @@ import EditProduct from './EditProduct';
 function App() {
   return (
     <div className="container">
-   <BrowserRouter>
+   
+  <BrowserRouter> 
+  
+ 
+
+ <div className='row'>
+<Route exact path ="/">
+           <PortalLayout/>
+           </Route>
+
+ <Route exact path ="/">
+           <Home/>
+           </Route>
+
+           <Route exact path ="/Products">
+           <Products/>
+           </Route>
+
+           <Route exact path ="/CartItems">
+           <CartItems/>
+           </Route>
+
+           <Route exact path ="/Login">
+           <Login/>
+           </Route>
+
+           <Route exact path ="/addproduct">
+           <AddProduct/>
+           </Route>
+
+           <Route exact path ="/CreateProduct">
+           <CreateProduct/>
+           </Route>
+
+           <Route exact path ="/edit-product/:id">
+           <EditProduct/>
+           </Route>
+
+</div> 
+   </BrowserRouter> 
+   {/* <BrowserRouter>
    <div className="row">
-          <Route>
+          
           <Route path="/" element={<PortalLayout />}>
           <Route path="/" element={<Home/>}/>      
           <Route path="/Products" element={<Products/>}/>
@@ -50,10 +90,10 @@ function App() {
           <Route path="/addproduct" element={<AddProduct/>}/>
           <Route path="/create-product" element={<CreateProduct/>}/>
           <Route path="/edit-product/:id" element={<EditProduct/>}/>
-          </Route>
+          
           </div>
-   </BrowserRouter>
-    
+   </BrowserRouter> */}
+     
     </div>
   );
 }
