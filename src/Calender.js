@@ -17,7 +17,7 @@ function Calendar({ id }) {
     },
     onSubmit: async (values) => {
       console.log(values);
-      let hrs = await axios.post(`${Config.api}/hours/${id}`, values);
+      let hrs = await fetch.post(`${Config.api}/hours/${id}`, values);
       console.log(hrs.data);
       let index = a.findIndex((cart) => cart._id === id);
       console.log(index);

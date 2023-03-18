@@ -8,7 +8,7 @@ function ProductCard({ item }) {
   const CartItem = cart.CartItems;
   const setcart = cart.setCartItems;
   const Add = async (_id) => {
-    let product = await axios.get(`${Config.api}/Product/${_id}`);
+    let product = await fetch.get(`${Config.api}/Product/${_id}`);
     console.log(product.data);
     let addproduct = product.data;
     CartItem.push(addproduct);

@@ -36,7 +36,7 @@ function Contact() {
       return error;
     },
     onSubmit: async (values) => {
-      let contact = await axios.post(`${Config.api}/Contacts`, values);
+      let contact = await fetch.post(`${Config.api}/Contacts`, values);
       alert("Thanks for contacting us,We'll call you Soon");
       formik.resetForm();
     },

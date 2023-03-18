@@ -40,7 +40,7 @@ function CreateProduct() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post(`${Config.api}/Products`,values);
+        await fetch.post(`${Config.api}/Products`,values);
         alert("Added Successfully");
         navigate('/addproduct')
       } catch (error) {

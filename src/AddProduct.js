@@ -15,7 +15,7 @@ function AddProduct() {
     const fetchData = async () => {
       try {
         setLoading(true);   
-        const products = await axios.get(`${Config.api}/Products`);    
+        const products = await fetch.get(`${Config.api}/Products`);    
         setProductList(products.data);
         setLoading(false);
       } catch (error) {

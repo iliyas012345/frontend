@@ -13,7 +13,7 @@ function Products() {
   let Prod=async()=>{
     try {
     setLoading(true);
-    let prods = await axios.get(`${Config.api}/Products`)
+    let prods = await fetch.get(`${Config.api}/Products`)
     setProduct(prods.data);
     setLoading(false);
     } catch (error) {

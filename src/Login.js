@@ -36,7 +36,7 @@ function Login() {
     onSubmit: async (values) => {
       try {
         setLoading(true);
-        const user = await axios.post(`${Config.api}/admin/login`, values);
+        const user = await fetch.post(`${Config.api}/admin/login`, values);
         localStorage.setItem("myreact", user.data.token);
         if (user.data.message === "Success") {
           setLoading(false);
