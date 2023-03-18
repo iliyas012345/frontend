@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Config } from "./Config";
 import { UserContext } from "./Context";
 
@@ -45,6 +45,3 @@ function ProductCard({ item }) {
 }
 
 export default ProductCard;
-// npx create-react-app my-app
-// cd my-app
-// npm start
