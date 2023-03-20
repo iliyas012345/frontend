@@ -6,7 +6,7 @@ import { Config } from './Config'
 import Loading from "./Loading";
 // import { useNavigate } from "react-router";
 //import { useNavigate } from "react-router";
-import { Link, useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 function Login() {
    //const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
