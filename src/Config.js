@@ -1,5 +1,5 @@
 export const Config={
-    // api:"http://localhost:3006"
-    api:"https://equipment-rental-portal.onrender.com"
+    
     //api:"http://localhost:8000"
+    api:"https://backend1-usas.onrender.com"
 }
