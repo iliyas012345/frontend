@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Config } from './Config';
@@ -27,7 +27,7 @@ function AddProduct() {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`${Config.api}/Products/${id}`);
+      await fetch.delete(`${Config.api}/Products/${id}`);
       const pIndex = productList.findIndex((p) => p.id == id);
       productList.splice(pIndex, 1);
       setProductList([...productList]);
@@ -38,7 +38,7 @@ function AddProduct() {
   };
   const EditProduct = async (id) => {
     try {
-      const product = await axios.put(`${Config.api}/Products/${id}`);
+      const product = await fetch.put(`${Config.api}/Products/${id}`);
       setProductId(id);
     } catch (error) {
       alert("something went wrong");

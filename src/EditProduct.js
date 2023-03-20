@@ -50,7 +50,7 @@ function EditProduct() {
         },
     onSubmit: async (values) => {
       try {
-        await axios.put(
+        await fetch.put(
           `${Config.api}/Products/${params.id}`,
           values
         );
